@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "react-quill-new/dist/quill.snow.css";
-import ReactQuill from "react-quill-new";
 import { useAuth } from "@clerk/nextjs";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
@@ -10,6 +8,9 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import ImageKit from "@/components/Image";
 import Upload from "@/components/Upload";
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
+import "react-quill-new/dist/quill.snow.css"; // ES6
 
 export default function Write() {
   const router = useRouter();
