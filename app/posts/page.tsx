@@ -21,7 +21,9 @@ export default function Posts() {
       </button>
       <div className="flex flex-col-reverse md:flex-row gap-5">
         <div className="flex-1">
-          <PostList />
+          <Suspense fallback={<p className="font-semibold">Loading...</p>}>
+            <PostList />
+          </Suspense>
         </div>
 
         <div className={`${open ? "block" : "hidden"} md:block`}>
