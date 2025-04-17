@@ -1,10 +1,8 @@
-import React from 'react'
+import React from "react";
 import UpdatePost from "@/components/UpdatePost";
 
-const UpdatePostPage = async ({ params }: SearchParamProps) => {
+export default async function UpdatePostPage({ params }: SearchParamProps) {
   const slug = ((await params)?.slug as string) || "";
 
   return <UpdatePost slug={slug} />;
-};
-
-export default UpdatePostPage;
+}

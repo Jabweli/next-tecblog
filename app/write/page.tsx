@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import ImageKit from "@/components/Image";
 import Upload from "@/components/Upload";
 
-const Write = () => {
+export default function Write() {
   const router = useRouter();
   const [value, setValue] = useState("");
   const [cover, setCover] = useState<any>({});
@@ -188,6 +188,4 @@ const Write = () => {
       </form>
     </div>
   );
-};
-
-export default Write;
+}

@@ -1,9 +1,7 @@
 import SinglePost from "@/components/SinglePost";
 
-const PostDetails = async ({ params }: SearchParamProps) => {
+export default async function PostDetails({ params }: SearchParamProps) {
   const slug = ((await params)?.slug as string) || "";
 
   return <SinglePost slug={slug} />;
-};
-
-export default PostDetails;
+}
