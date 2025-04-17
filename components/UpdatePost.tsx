@@ -32,7 +32,7 @@ const UpdatePost = ({ slug }: { slug: string }) => {
   const { getToken } = useAuth();
 
 
-  const { isPending, error, data } = useQuery({
+  const { data } = useQuery({
     queryKey: ["post", slug],
     queryFn: () => fetchPost(slug),
   });
@@ -82,7 +82,7 @@ const UpdatePost = ({ slug }: { slug: string }) => {
       router.replace(`/post/${res.data.slug}`);
     },
     onError: (error) => {
-      console.error("Mutation error:", error);
+      toast.success("Post update failed!");
     },
   });
 

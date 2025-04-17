@@ -9,7 +9,7 @@ export default function NotFound() {
           Oops! Page not found.
         </p>
         <p className="mt-4 text-gray-500">
-          The page you're looking for doesn&apos;t exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link
           href="/"
