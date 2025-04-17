@@ -10,7 +10,7 @@ export default function Posts() {
 
   return (
     <div className="mb-8">
-      <Suspense fallback={<p className="font-semibold">Loding title...</p>}>
+      <Suspense fallback={<p className="font-semibold">Loading title...</p>}>
         <PageTitle />
       </Suspense>
       <button
@@ -25,7 +25,9 @@ export default function Posts() {
         </div>
 
         <div className={`${open ? "block" : "hidden"} md:block`}>
-          <SideMenu />
+          <Suspense fallback={<p className="font-semibold">Loading...</p>}>
+            <SideMenu />
+          </Suspense>
         </div>
       </div>
     </div>

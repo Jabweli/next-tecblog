@@ -2,6 +2,7 @@ import FeaturedPosts from "@/components/FeaturedPosts";
 import MainCategories from "@/components/MainCategories";
 import PostList from "@/components/PostList";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -64,7 +65,9 @@ export default function Home() {
       </div>
 
       {/* categories */}
-      <MainCategories />
+      <Suspense fallback={<p className="font-semibold">Loading...</p>}>
+        <MainCategories />
+      </Suspense>
       <FeaturedPosts />
 
       {/* recent posts */}
