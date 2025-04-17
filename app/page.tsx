@@ -73,7 +73,9 @@ export default function Home() {
       {/* recent posts */}
       <div className="">
         <h1 className="mt-8 mb-5 text-2xl text-gray-600">Recent posts</h1>
-        <PostList />
+        <Suspense fallback={<p className="font-semibold">Loading...</p>}>
+          <PostList />
+        </Suspense>
       </div>
     </div>
   );
