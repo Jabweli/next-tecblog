@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter.ttf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background-color: #e6e6ff;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: Inter, sans-serif;
+}
+
+.animatedBtn {
+  animation-duration: 10000ms;
+}
+
+.quill {
+  min-height: 500px !important;
+}
+
+.ql-editor,
+.ql-container,
+.ql-toolbar {
+  border: none !important;
+}
+
+.ql-container {
+  min-height: 250px !important;
+}
